@@ -1,1 +1,10 @@
-
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/voter
+    username: user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    show-sql: true
