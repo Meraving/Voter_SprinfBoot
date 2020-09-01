@@ -3,6 +3,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/voter
     username: user
     password: password
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-test-query: SELECT 1;
   jpa:
     hibernate:
       ddl-auto: create-drop
