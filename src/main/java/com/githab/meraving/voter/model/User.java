@@ -1,5 +1,7 @@
 package com.githab.meraving.voter.model;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.BatchSize;
 import org.springframework.util.CollectionUtils;
 
@@ -10,6 +12,8 @@ import java.util.Collection;
 import java.util.EnumSet;
 import java.util.Set;
 
+@NoArgsConstructor
+@Data
 @Entity
 @Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = "name", name = "users_unique_name_idx")})
 public class User extends AbstractNamedEntity{
@@ -27,35 +31,4 @@ public class User extends AbstractNamedEntity{
 //    @Fetch(FetchMode.SUBSELECT)
     @BatchSize(size = 200)
     private Set<Role> roles;
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Collection<Role> roles) {
-        this.roles = CollectionUtils.isEmpty(roles) ? EnumSet.noneOf(Role.class) : EnumSet.copyOf(roles);
-    }
-
-    public User() {
-    }
-
-    public User (Integer id, String name, String password, Collection<Role> roles){
-
-       super(id, name);
-        this.password = password;
-        setRoles(roles);
-
-    }
-    public User (User u){
-        this(u.getId(), u.name, u.getPassword(), u.getRoles());
-    }
-
 }
