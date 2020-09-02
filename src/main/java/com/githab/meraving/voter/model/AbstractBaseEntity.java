@@ -8,31 +8,31 @@ import javax.persistence.*;
 @MappedSuperclass
 @Access(AccessType.FIELD)
 
-public abstract class AbstractBaseEntity implements Persistable<Integer> {
+public abstract class AbstractBaseEntity implements Persistable<Long> {
 
 
     @Id
     @SequenceGenerator(name = "global_seq", sequenceName = "global_seq", allocationSize = 1, initialValue = 1)
     //    @Column(name = "id", unique = true, nullable = false, columnDefinition = "integer default nextval('global_seq')")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
-    private Integer id;
+    private Long id;
 
     protected AbstractBaseEntity() {
     }
 
-    protected AbstractBaseEntity(Integer id) {
+    protected AbstractBaseEntity(Long id) {
         this.id = id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
     @Override
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public int id() {
+    public Long id() {
         return id;
     }
 
@@ -60,7 +60,7 @@ public abstract class AbstractBaseEntity implements Persistable<Integer> {
 
     @Override
     public int hashCode() {
-        return id == null ? 0 : id;
+       return  (int) (id == null ? 0 : id);
     }
 
 }
