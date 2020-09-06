@@ -1,6 +1,7 @@
 package com.githab.meraving.voter.repository;
 
 import com.githab.meraving.voter.model.Restaurant;
+import com.githab.meraving.voter.model.User;
 import com.githab.meraving.voter.model.Vote;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -19,5 +20,5 @@ public interface VoteRepository extends JpaRepository<Vote,Long> {
 
     List<Vote> getAllByDate (LocalDate date);
     List<Vote> getAllByDateAndRestaurant (LocalDate date, Restaurant restaurant);
-
+    Vote getByDateAndUser (LocalDate date, User user);
 }

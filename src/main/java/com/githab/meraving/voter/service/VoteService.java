@@ -1,6 +1,7 @@
 package com.githab.meraving.voter.service;
 
 import com.githab.meraving.voter.model.Restaurant;
+import com.githab.meraving.voter.model.User;
 import com.githab.meraving.voter.model.Vote;
 import com.githab.meraving.voter.repository.VoteRepository;
 import org.springframework.stereotype.Service;
@@ -41,7 +42,9 @@ public class VoteService {
     public List<Vote> getAllByDateAndRestaurant(LocalDate date, Restaurant restaurant) {
         return repository.getAllByDateAndRestaurant(date, restaurant);
     }
-
+    public Vote getByDateAndUser (LocalDate date, User user){
+        return getByDateAndUser(date,user);
+    }
 
 }
 
