@@ -1,0 +1,197 @@
+DELETE http://localhost:8080/rest/meal/3
+
+<> 2020-09-07T105959.500.json
+
+###
+
+GET http://localhost:8080/rest/meals
+Content-Type: application/json
+
+<> 2020-09-07T105949.200.json
+
+###
+
+DELETE http://localhost:8080/rest/meal/1
+
+###
+
+GET http://localhost:8080/rest/meals
+Content-Type: application/json
+
+<> 2020-09-07T105936.200.json
+
+###
+
+PUT http://localhost:8080/rest/meal/4
+Content-Type: application/json
+
+{
+  "name": "окрошка на пиве"
+}
+
+<> 2020-09-07T105933.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": "окрошка 2"
+}
+
+<> 2020-09-07T105924.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": "окрошка"
+}
+
+<> 2020-09-07T105818.500.json
+
+###
+
+GET http://localhost:8080/rest/meals
+Content-Type: application/json
+
+<> 2020-09-07T105810.200.json
+
+###
+
+PUT http://localhost:8080/rest/meal/2
+Content-Type: application/json
+
+{
+  "name": "окрошка на пиве"
+}
+
+<> 2020-09-07T105749.500.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": "окрошка"
+}
+
+<> 2020-09-07T105747.500.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": "окрошка"
+}
+
+<> 2020-09-07T105740.200.json
+
+###
+
+DELETE http://localhost:8080/rest/meal/1
+
+<> 2020-09-07T105401.500.json
+
+###
+
+GET http://localhost:8080/rest/meals
+Content-Type: application/json
+
+<> 2020-09-07T105315.200.json
+
+###
+
+PUT http://localhost:8080/rest/meal/2
+Content-Type: application/json
+
+{
+  "name": "окрошка на пиве"
+}
+
+<> 2020-09-07T105305.200.json
+
+###
+
+PUT http://localhost:8080/rest/meal/2
+
+{
+  "name": "окрошка на пиве"
+}
+
+<> 2020-09-07T105243.415.json
+
+###
+
+GET http://localhost:8080/rest/meals
+Content-Type: application/json
+
+<> 2020-09-07T105151.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": "окрошка"
+}
+
+<> 2020-09-07T105145.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": ""
+}
+
+<> 2020-09-07T105127.400.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": "борщ"
+}
+
+<> 2020-09-07T104912.200.json
+
+###
+
+GET http://localhost:8080/rest/meals
+Content-Type: application/json
+
+<> 2020-09-07T104632.200.json
+
+###
+
+GET http://localhost:8080/rest/meals
+Content-Type: application/json
+
+<> 2020-09-07T104508.401.json
+
+###
+
+GET http://localhost:8080/rest/meals
+Content-Type: application/json
+
+<> 2020-09-07T104245.401.json
+
+###
+
+GET http://lopcalhost:8080/rest/meals
+Content-Type: application/json
+
+###
+

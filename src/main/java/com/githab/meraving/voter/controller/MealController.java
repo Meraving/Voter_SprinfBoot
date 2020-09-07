@@ -1,45 +1,48 @@
 package com.githab.meraving.voter.controller;
 
-import com.githab.meraving.voter.model.Meal;
+import com.githab.meraving.voter.dto.CreateMealDto;
+import com.githab.meraving.voter.dto.MealDto;
+import com.githab.meraving.voter.dto.UpdateMealDto;
 import com.githab.meraving.voter.service.MealService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
-@Controller
-@ResponseBody
+@RestController
 @RequestMapping("/rest")
 public class MealController {
 
     private final MealService mealService;
 
     @Autowired
-    public MealController (MealService mealService){this.mealService = mealService;}
-
-    @PostMapping("/meal")
-    public Meal createMeal (@RequestBody Meal meal){
-        return mealService.create(meal);
+    public MealController(MealService mealService) {
+        this.mealService = mealService;
     }
 
-    @GetMapping ("/meal/{id}")
-    public Meal get (@PathVariable Long id){
+    @PostMapping("/meal")
+    public MealDto createMeal(@RequestBody @Valid CreateMealDto createMealDto) {
+        return mealService.create(createMealDto);
+    }
+
+    @GetMapping("/meal/{id}")
+    public MealDto get(@PathVariable("id") Long id) {
         return mealService.get(id);
     }
 
-    @PostMapping("/meal")
-    public void updateMeal (@RequestBody Meal meal){
-        mealService.update(meal);
+    @PutMapping("/meal/{id}")
+    public MealDto updateMeal(@PathVariable("id") Long id, @RequestBody @Valid UpdateMealDto updateMealDto) {
+        return mealService.update(id, updateMealDto);
     }
 
     @DeleteMapping("/meal/{id}")
-    public void deleteMeal (@PathVariable Long id) {
+    public void deleteMeal(@PathVariable("id") Long id) {
         mealService.delete(id);
     }
 
-    @GetMapping ("/meals")
-    public List<Meal> getAll (){
+    @GetMapping("/meals")
+    public List<MealDto> getAll() {
         return mealService.getAll();
     }
 
