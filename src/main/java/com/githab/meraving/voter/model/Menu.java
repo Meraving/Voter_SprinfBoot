@@ -30,8 +30,8 @@ public class Menu extends AbstractBaseEntity{
 
     public static Menu of (CreateMenuDto createMenuDto, Restaurant restaurant){
         Menu menu = new Menu();
-        menu.date = createMenuDto.getDate();
-        menu.restaurant = restaurant;
+        menu.setDate(createMenuDto.getDate());
+        menu.setRestaurant(restaurant);
         return menu;
     }
 

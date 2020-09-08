@@ -11,10 +11,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface MenuRepository extends JpaRepository<Menu,Long> {
-    @Transactional
-    @Modifying
-    @Query("DELETE FROM Menu m WHERE m.id=:id")
-    Long delete(@Param("id") Long id);
 
     List<Menu> getAllByDate (LocalDate date);
 }

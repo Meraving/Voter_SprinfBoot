@@ -1,5 +1,6 @@
 package com.githab.meraving.voter.model;
 
+import com.githab.meraving.voter.dto.CreateVoteDto;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -29,4 +30,11 @@ public class Vote extends AbstractBaseEntity{
     @OnDelete(action = OnDeleteAction.CASCADE)
     @NotNull
     private Menu menu;
+
+    public static Vote of (User user, Menu menu){
+        Vote vote = new Vote();
+        vote.setUser(user);
+        vote.setMenu(menu);
+        return vote;
+    }
 }

@@ -50,7 +50,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getByName(String name) {
         Assert.notNull(name, "name must not be null");
-        return UserDto.of(repository.getByName(name));
+        return UserDto.of(repository.getByName(name)); //по идее нужно проверять через getFromOptional, но как передать Optional?
     }
 
     @Override

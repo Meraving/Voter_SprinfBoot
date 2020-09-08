@@ -10,8 +10,7 @@ import java.util.List;
 
 public interface VoteRepository extends JpaRepository<Vote,Long> {
 
-
-    List<Vote> getAllByMenu_Date (LocalDate date);
     List<Vote> getAllByMenu (Menu menu);
+
     Vote getByMenu_DateAndUser (LocalDate date, User user);
 }
