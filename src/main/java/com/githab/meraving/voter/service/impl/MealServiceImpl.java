@@ -12,7 +12,6 @@ import org.springframework.util.Assert;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.githab.meraving.voter.util.ValidationUtil.checkNotFoundWithId;
 import static com.githab.meraving.voter.util.ValidationUtil.getFromOptional;
 
 @Service

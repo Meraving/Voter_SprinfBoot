@@ -9,13 +9,13 @@ import java.util.List;
 
 public interface MealService {
 
-    public MealDto create(CreateMealDto createMealDto);
+    MealDto create(CreateMealDto createMealDto);
 
-    public MealDto get(Long id);
+    MealDto get(Long id);
 
-    public MealDto update(Long id, UpdateMealDto updateMealDto);
+    MealDto update(Long id, UpdateMealDto updateMealDto);
 
-    public void delete(Long id);
+    void delete(Long id);
 
-    public List<MealDto> getAll();
+    List<MealDto> getAll();
 }
