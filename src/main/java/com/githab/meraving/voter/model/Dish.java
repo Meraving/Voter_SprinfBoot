@@ -1,6 +1,7 @@
 package com.githab.meraving.voter.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -13,6 +14,7 @@ import java.math.BigDecimal;
 
 @NoArgsConstructor
 @Data
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "dish", uniqueConstraints = {@UniqueConstraint(columnNames = {"menu_id", "meal_id"}, name = "dish_unique_menu_meal_idx")})
 public class Dish extends AbstractNamedEntity{
@@ -33,4 +35,12 @@ public class Dish extends AbstractNamedEntity{
     @Column(name = "price", nullable = false)
     @Range(min = 0)
     private BigDecimal price;
+
+    public static Dish of(Menu menu, Meal meal, BigDecimal price){
+        Dish dish =  new Dish();
+        dish.setMenu(menu);
+        dish.setMeal(meal);
+        dish.setPrice(price);
+        return dish;
+    }
 }

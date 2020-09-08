@@ -6,6 +6,7 @@ import com.githab.meraving.voter.dto.UpdateMealDto;
 import com.githab.meraving.voter.model.Meal;
 import com.githab.meraving.voter.repository.MealRepository;
 import com.githab.meraving.voter.service.MealService;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
@@ -14,14 +15,11 @@ import java.util.stream.Collectors;
 
 import static com.githab.meraving.voter.util.ValidationUtil.getFromOptional;
 
+@AllArgsConstructor
 @Service
 public class MealServiceImpl implements MealService {
 
     private final MealRepository repository;
-
-    public MealServiceImpl(MealRepository repository) {
-        this.repository = repository;
-    }
 
     @Override
     public MealDto create(CreateMealDto createMealDto) {

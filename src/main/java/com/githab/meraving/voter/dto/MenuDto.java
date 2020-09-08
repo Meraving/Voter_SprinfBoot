@@ -20,9 +20,9 @@ public class MenuDto {
     private LocalDate date;
 
     @NotNull
-    private Long restaurantId;
+    private RestaurantDto restaurantDto;
 
     public static MenuDto of(Menu menu) {
-        return new MenuDto(menu.getId(), menu.getDate(), menu.getRestaurant().getId());
+        return new MenuDto(menu.getId(), menu.getDate(),RestaurantDto.of(menu.getRestaurant()));
     }
 }

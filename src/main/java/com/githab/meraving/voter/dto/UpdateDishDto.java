@@ -5,18 +5,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
+import java.math.BigDecimal;
 
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class CreateMenuDto {
+public class UpdateDishDto {
+
+    private Long id;
 
     @NotNull
-    private LocalDate date;
+    private Long menuId;
 
     @NotNull
-    private Long restaurantId;
+    private Long mealId;
+
+    @NotNull
+    private BigDecimal price;
+
+
 
 }

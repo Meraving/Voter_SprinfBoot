@@ -1,9 +1,10 @@
-package com.githab.meraving.voter.service;
+package com.githab.meraving.voter.service.impl;
 
 import com.githab.meraving.voter.model.Restaurant;
 import com.githab.meraving.voter.model.User;
 import com.githab.meraving.voter.model.Vote;
 import com.githab.meraving.voter.repository.VoteRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
@@ -12,11 +13,10 @@ import java.util.List;
 
 import static com.githab.meraving.voter.util.ValidationUtil.checkNotFoundWithId;
 
+@AllArgsConstructor
 @Service
-public class VoteService {
-    private final VoteRepository repository;
-
-    public VoteService (VoteRepository repository){this.repository = repository;}
+public class VoteServiceImpl {
+/*    private final VoteRepository repository;
 
     public Vote create (Vote vote){
         Assert.notNull(vote, "vote must be not null");
@@ -45,6 +45,6 @@ public class VoteService {
     public Vote getByDateAndUser (LocalDate date, User user){
         return getByDateAndUser(date,user);
     }
-
+*/
 }
 

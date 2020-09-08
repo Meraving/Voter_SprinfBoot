@@ -1,0 +1,49 @@
+package com.githab.meraving.voter.controller;
+
+import com.githab.meraving.voter.dto.CreateDishDto;
+import com.githab.meraving.voter.dto.DishDto;
+import com.githab.meraving.voter.dto.UpdateDishDto;
+import com.githab.meraving.voter.service.DishService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
+
+@RestController
+@RequestMapping("/rest")
+public class DishController {
+
+    private final DishService dishService;
+
+    @Autowired
+    public DishController(DishService dishService) {
+        this.dishService = dishService;
+    }
+
+    @PostMapping("/dish")
+    public DishDto createMeal(@RequestBody @Valid CreateDishDto createDishDto) {
+        return dishService.create(createDishDto);
+    }
+
+    @GetMapping("/dish/{id}")
+    public DishDto get(@PathVariable("id") Long id) {
+        return dishService.get(id);
+    }
+
+    @PutMapping("/dish/{id}")
+    public DishDto updateMeal(@PathVariable("id") Long id, @RequestBody @Valid UpdateDishDto updateDishDto) {
+        return dishService.update(id, updateDishDto);
+    }
+
+    @DeleteMapping("/dish/{id}")
+    public void deleteMeal(@PathVariable("id") Long id) {
+        dishService.delete(id);
+    }
+
+    @GetMapping("/dishes/{menuId}")
+    public List<DishDto> getAll(@PathVariable("menuId") Long id) {
+        return dishService.getAllByMenu(id);
+    }
+
+}
