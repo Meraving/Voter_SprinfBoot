@@ -1,3 +1,142 @@
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+  "date": "2020-09-08",
+  "restaurantId":"7"
+}
+
+<> 2020-09-08T084332.200.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+  "date": "2012-04-23",
+  "restaurantId":"7"
+}
+
+<> 2020-09-08T084314.500.json
+
+###
+
+GET http://localhost:8080/rest/menus/2012-04-23
+Content-Type: application/json
+
+<> 2020-09-08T084115.200.json
+
+###
+
+GET http://localhost:8080/rest/menus/2012-04-23
+Content-Type: application/json
+
+<> 2020-09-08T083503.400.json
+
+###
+
+GET http://localhost:8080/rest/menus/2012-04-23
+Content-Type: application/json
+
+<> 2020-09-08T074536.400.json
+
+###
+
+GET http://localhost:8080/rest/menus/"2012-04-23"
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/rest/menus/"2012-04-23"
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/rest/menus/date:"2012-04-23"
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/rest/menus/(date:"2012-04-23")
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/rest/menus/(2012-04-23)
+Content-Type: application/json
+
+<> 2020-09-08T074454.400.json
+
+###
+
+GET http://localhost:8080/rest/menus/2012-04-23
+Content-Type: application/json
+
+<> 2020-09-08T074439.400.json
+
+###
+
+GET http://localhost:8080/rest/menus/{2012-04-23}
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/rest/menus/2012-04-23
+Content-Type: application/json
+
+<> 2020-09-08T074214.400.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+  "date": "2012-04-23",
+  "restaurantId":"7"
+}
+
+<> 2020-09-08T074127.200.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+  "date": "01012000",
+  "restaurantId":"7"
+}
+
+<> 2020-09-08T074006.400.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+  "date": "01/01/2000",
+  "restaurantId":"7"
+}
+
+<> 2020-09-08T073956.400.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+  "date": "01/01/2000",
+  "restaurantId":7
+}
+
+<> 2020-09-08T073940.400.json
+
+###
+
 GET http://localhost:8080/rest/restaurants
 Content-Type: application/json
 
@@ -276,139 +415,6 @@ GET http://localhost:8080/rest/meals
 Content-Type: application/json
 
 <> 2020-09-07T105810.200.json
-
-###
-
-PUT http://localhost:8080/rest/meal/2
-Content-Type: application/json
-
-{
-  "name": "окрошка на пиве"
-}
-
-<> 2020-09-07T105749.500.json
-
-###
-
-POST http://localhost:8080/rest/meal
-Content-Type: application/json
-
-{
-  "name": "окрошка"
-}
-
-<> 2020-09-07T105747.500.json
-
-###
-
-POST http://localhost:8080/rest/meal
-Content-Type: application/json
-
-{
-  "name": "окрошка"
-}
-
-<> 2020-09-07T105740.200.json
-
-###
-
-DELETE http://localhost:8080/rest/meal/1
-
-<> 2020-09-07T105401.500.json
-
-###
-
-GET http://localhost:8080/rest/meals
-Content-Type: application/json
-
-<> 2020-09-07T105315.200.json
-
-###
-
-PUT http://localhost:8080/rest/meal/2
-Content-Type: application/json
-
-{
-  "name": "окрошка на пиве"
-}
-
-<> 2020-09-07T105305.200.json
-
-###
-
-PUT http://localhost:8080/rest/meal/2
-
-{
-  "name": "окрошка на пиве"
-}
-
-<> 2020-09-07T105243.415.json
-
-###
-
-GET http://localhost:8080/rest/meals
-Content-Type: application/json
-
-<> 2020-09-07T105151.200.json
-
-###
-
-POST http://localhost:8080/rest/meal
-Content-Type: application/json
-
-{
-  "name": "окрошка"
-}
-
-<> 2020-09-07T105145.200.json
-
-###
-
-POST http://localhost:8080/rest/meal
-Content-Type: application/json
-
-{
-  "name": ""
-}
-
-<> 2020-09-07T105127.400.json
-
-###
-
-POST http://localhost:8080/rest/meal
-Content-Type: application/json
-
-{
-  "name": "борщ"
-}
-
-<> 2020-09-07T104912.200.json
-
-###
-
-GET http://localhost:8080/rest/meals
-Content-Type: application/json
-
-<> 2020-09-07T104632.200.json
-
-###
-
-GET http://localhost:8080/rest/meals
-Content-Type: application/json
-
-<> 2020-09-07T104508.401.json
-
-###
-
-GET http://localhost:8080/rest/meals
-Content-Type: application/json
-
-<> 2020-09-07T104245.401.json
-
-###
-
-GET http://lopcalhost:8080/rest/meals
-Content-Type: application/json
 
 ###
 

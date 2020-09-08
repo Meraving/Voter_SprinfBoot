@@ -22,8 +22,8 @@ public class RestaurantController {
     }
 
     @PostMapping("/restaurant")
-    public RestaurantDto createRestaurant(@RequestBody @Valid CreateRestaurantDto createMealDto) {
-        return restaurantService.create(createMealDto);
+    public RestaurantDto createRestaurant(@RequestBody @Valid CreateRestaurantDto createRestaurantDto) {
+        return restaurantService.create(createRestaurantDto);
     }
 
     @GetMapping("/restaurant/{id}")
