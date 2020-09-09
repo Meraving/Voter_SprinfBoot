@@ -11,7 +11,9 @@ import com.githab.meraving.voter.repository.UserRepository;
 import com.githab.meraving.voter.repository.VoteRepository;
 import com.githab.meraving.voter.service.VoteService;
 import com.githab.meraving.voter.util.exception.TooLateException;
+import com.githab.meraving.voter.util.exception.WrongDateException;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
@@ -28,6 +30,8 @@ public class VoteServiceImpl implements VoteService {
     private final VoteRepository repository;
     private final UserRepository userRepository;
     private final MenuRepository menuRepository;
+//    @Value("${value.borderTime}")
+    private final String borderTime = "11:00:00";
 
     @Override
     public VoteDto create(CreateVoteDto createVoteDto) {
@@ -46,8 +50,8 @@ public class VoteServiceImpl implements VoteService {
     @Override
     public VoteDto update(Long id, UpdateVoteDto updateVoteDto) {
         Assert.notNull(updateVoteDto, "vote must not be null");
-        if (LocalTime.now().isAfter(LocalTime.parse("11:00:00"))) {
-            throw new TooLateException("It,s too late to change your mind!");
+        if (LocalTime.now().isAfter(LocalTime.parse(borderTime))) {
+            throw new TooLateException();
         }
         Vote vote = getFromOptional(repository.findById(id));
         User user = getFromOptional(userRepository.findById(updateVoteDto.getUserId()));
@@ -70,23 +74,27 @@ public class VoteServiceImpl implements VoteService {
     }
 
     @Override
-    public VoteDto getByMenu_DateAndUser(LocalDate date, Long id) {
+    public VoteDto getByUserAndMenu_Date(Long id, LocalDate date) {
         User user = getFromOptional(userRepository.findById(id));
-        return VoteDto.of(getFromOptional(repository.getByMenu_DateAndUser(date, user)));
+        return VoteDto.of(getFromOptional(repository.getByUserAndMenu_Date(user, date)));
     }
 
     @Override
-    public VoteDto castVote(Long Menuid) {
+    public VoteDto castVote(Long menuId) {
         User user = null;//юзера, нам, по идее, отдаст Security?
-        Vote vote = getFromOptional(repository.getByMenu_DateAndUser(LocalDate.now(), null));
+        Vote vote = getFromOptional(repository.getByUserAndMenu_Date(user, LocalDate.now()));
+        Menu menu = getFromOptional(menuRepository.findById(menuId));
+        if (!menu.getDate().equals(LocalDate.now())){
+            throw new WrongDateException();
+        }
         if (vote == null) {
-            vote = Vote.of(user, getFromOptional(menuRepository.findById(Menuid)));
+            vote = Vote.of(user, menu);
             return VoteDto.of(repository.save(vote));
-        } else if (LocalTime.now().isAfter(LocalTime.parse("11:00:00"))) {
-            throw new TooLateException("It,s too late to change your mind!");
+        } else if (LocalTime.now().isAfter(LocalTime.parse(borderTime))) {
+            throw new TooLateException();
         } else {
             vote.setUser(user);
-            vote.setMenu(getFromOptional(menuRepository.findById(Menuid)));
+            vote.setMenu(menu);
             return VoteDto.of(repository.save(vote));
         }
     }

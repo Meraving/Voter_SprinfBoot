@@ -13,5 +13,5 @@ public interface VoteRepository extends JpaRepository<Vote,Long> {
 
     List<Vote> getAllByMenu (Menu menu);
 
-    Optional<Vote> getByMenu_DateAndUser (LocalDate date, User user);
+    Optional<Vote> getByUserAndMenu_Date (User user, LocalDate date);
 }

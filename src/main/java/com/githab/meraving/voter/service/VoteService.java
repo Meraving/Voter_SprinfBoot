@@ -19,7 +19,7 @@ public interface VoteService {
 
     List<VoteDto> getAllByMenu(Long id);
 
-    VoteDto getByMenu_DateAndUser(LocalDate date, Long id);
+    VoteDto getByUserAndMenu_Date (Long id, LocalDate date);
 
     VoteDto castVote(Long Menuid);
 
