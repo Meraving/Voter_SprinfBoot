@@ -3,8 +3,6 @@ package com.githab.meraving.voter.service;
 import com.githab.meraving.voter.dto.CreateVoteDto;
 import com.githab.meraving.voter.dto.UpdateVoteDto;
 import com.githab.meraving.voter.dto.VoteDto;
-import com.githab.meraving.voter.model.Menu;
-import com.githab.meraving.voter.model.User;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,5 +20,7 @@ public interface VoteService {
     List<VoteDto> getAllByMenu(Long id);
 
     VoteDto getByMenu_DateAndUser(LocalDate date, Long id);
+
+    VoteDto castVote(Long Menuid);
 
 }

@@ -44,13 +44,19 @@ public class VoteController {
     }
 
     @GetMapping("/votes/{menuId}")
-    public List<VoteDto> getAllByMenu(@PathVariable("menuId")Long id) {
+    public List<VoteDto> getAllByMenu(@PathVariable("menuId") Long id) {
         return voteService.getAllByMenu(id);
     }
+
     @GetMapping("/votes/{date}/{userId}")
-    public VoteDto getAllByMenu(@PathVariable("date")  @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date,
-                                      @PathVariable("userId")Long id) {
-        return voteService.getByMenu_DateAndUser(date,id);
+    public VoteDto getAllByMenu(@PathVariable("date") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date,
+                                @PathVariable("userId") Long id) {
+        return voteService.getByMenu_DateAndUser(date, id);
+    }
+
+    @DeleteMapping("/castvote/{menuId}")
+    public VoteDto castVote(@PathVariable("menuId") Long id) {
+        return voteService.castVote(id);
     }
 
 }

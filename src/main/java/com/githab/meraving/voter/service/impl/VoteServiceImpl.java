@@ -10,11 +10,13 @@ import com.githab.meraving.voter.repository.MenuRepository;
 import com.githab.meraving.voter.repository.UserRepository;
 import com.githab.meraving.voter.repository.VoteRepository;
 import com.githab.meraving.voter.service.VoteService;
+import com.githab.meraving.voter.util.exception.TooLateException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,12 +46,16 @@ public class VoteServiceImpl implements VoteService {
     @Override
     public VoteDto update(Long id, UpdateVoteDto updateVoteDto) {
         Assert.notNull(updateVoteDto, "vote must not be null");
+        if (LocalTime.now().isAfter(LocalTime.parse("11:00:00"))) {
+            throw new TooLateException("It,s too late to change your mind!");
+        }
         Vote vote = getFromOptional(repository.findById(id));
         User user = getFromOptional(userRepository.findById(updateVoteDto.getUserId()));
         Menu menu = getFromOptional(menuRepository.findById(updateVoteDto.getMenuId()));
         vote.setUser(user);
         vote.setMenu(menu);
         return VoteDto.of(repository.save(vote));
+
     }
 
     @Override
@@ -69,5 +75,20 @@ public class VoteServiceImpl implements VoteService {
         return VoteDto.of(repository.getByMenu_DateAndUser(date, user));
     }
 
+    @Override
+    public VoteDto castVote(Long Menuid) {
+        User user = null;//юзера, нам, по идее, отдаст Security?
+        Vote vote = repository.getByMenu_DateAndUser(LocalDate.now(), null);
+        if (vote == null) {
+            vote = Vote.of(user, getFromOptional(menuRepository.findById(Menuid)));
+            return VoteDto.of(repository.save(vote));
+        } else if (LocalTime.now().isAfter(LocalTime.parse("11:00:00"))) {
+            throw new TooLateException("It,s too late to change your mind!");
+        } else {
+            vote.setUser(user);
+            vote.setMenu(getFromOptional(menuRepository.findById(Menuid)));
+            return VoteDto.of(repository.save(vote));
+        }
+    }
 }
 
