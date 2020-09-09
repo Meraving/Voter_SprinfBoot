@@ -70,15 +70,15 @@ public class VoteServiceImpl implements VoteService {
     }
 
     @Override
-    public VoteDto getByMenu_DateAndUser(LocalDate date, Long id) {//по идее нужно проверять через getFromOptional, но как передать Optional? еще мне жутко не нравится этот поиск по дате, но умнее ниче не придумал пока
+    public VoteDto getByMenu_DateAndUser(LocalDate date, Long id) {
         User user = getFromOptional(userRepository.findById(id));
-        return VoteDto.of(repository.getByMenu_DateAndUser(date, user));
+        return VoteDto.of(getFromOptional(repository.getByMenu_DateAndUser(date, user)));
     }
 
     @Override
     public VoteDto castVote(Long Menuid) {
         User user = null;//юзера, нам, по идее, отдаст Security?
-        Vote vote = repository.getByMenu_DateAndUser(LocalDate.now(), null);
+        Vote vote = getFromOptional(repository.getByMenu_DateAndUser(LocalDate.now(), null));
         if (vote == null) {
             vote = Vote.of(user, getFromOptional(menuRepository.findById(Menuid)));
             return VoteDto.of(repository.save(vote));

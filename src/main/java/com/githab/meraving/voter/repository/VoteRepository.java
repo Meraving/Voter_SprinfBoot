@@ -7,10 +7,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 public interface VoteRepository extends JpaRepository<Vote,Long> {
 
     List<Vote> getAllByMenu (Menu menu);
 
-    Vote getByMenu_DateAndUser (LocalDate date, User user);
+    Optional<Vote> getByMenu_DateAndUser (LocalDate date, User user);
 }
