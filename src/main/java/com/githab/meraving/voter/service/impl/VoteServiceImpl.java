@@ -20,6 +20,7 @@ import org.springframework.util.Assert;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.githab.meraving.voter.util.ValidationUtil.getFromOptional;
@@ -80,9 +81,9 @@ public class VoteServiceImpl implements VoteService {
     }
 
     @Override
-    public VoteDto castVote(Long menuId) {
-        User user = null;//юзера, нам, по идее, отдаст Security?
-        Vote vote = getFromOptional(repository.getByUserAndMenu_Date(user, LocalDate.now()));
+    public VoteDto castVote(Long menuId,Long userId) {
+        User user = getFromOptional(userRepository.findById(userId));//юзера, нам, по идее, отдаст Security?
+        Vote vote = repository.getByUserAndMenu_Date(user, LocalDate.now()).orElse(null);
         Menu menu = getFromOptional(menuRepository.findById(menuId));
         if (!menu.getDate().equals(LocalDate.now())){
             throw new WrongDateException();
@@ -93,10 +94,8 @@ public class VoteServiceImpl implements VoteService {
         } else if (LocalTime.now().isAfter(LocalTime.parse(borderTime))) {
             throw new TooLateException();
         } else {
-            vote.setUser(user);
             vote.setMenu(menu);
             return VoteDto.of(repository.save(vote));
         }
     }
 }
-

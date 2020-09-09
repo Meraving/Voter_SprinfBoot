@@ -1,103 +1,97 @@
-POST http://localhost:8080/rest/menu
+POST http://localhost:8080/rest/castvote/6:11
+Content-Type: application/json
+
+<> 2020-09-09T110507.200.json
+
+###
+
+POST http://localhost:8080/rest/castvote/5:11
+Content-Type: application/json
+
+<> 2020-09-09T110451.200.json
+
+###
+
+POST http://localhost:8080/rest/castvote/5:11
+Content-Type: application/json
+
+<> 2020-09-09T110448.200.json
+
+###
+
+POST http://localhost:8080/rest/user
 Content-Type: application/json
 
 {
-  "date": "2020-09-08",
-  "restaurantId":"7"
+  "name": "user",
+  "password": "password"
 }
 
-<> 2020-09-08T084332.200.json
+<> 2020-09-09T110441-7.200.json
 
 ###
 
-POST http://localhost:8080/rest/menu
+POST http://localhost:8080/rest/user
 Content-Type: application/json
 
 {
-  "date": "2012-04-23",
-  "restaurantId":"7"
+  "name": "admin",
+  "password": "admin"
 }
 
-<> 2020-09-08T084314.500.json
+<> 2020-09-09T110441-6.200.json
 
 ###
 
-GET http://localhost:8080/rest/menus/2012-04-23
-Content-Type: application/json
-
-<> 2020-09-08T084115.200.json
-
-###
-
-GET http://localhost:8080/rest/menus/2012-04-23
-Content-Type: application/json
-
-<> 2020-09-08T083503.400.json
-
-###
-
-GET http://localhost:8080/rest/menus/2012-04-23
-Content-Type: application/json
-
-<> 2020-09-08T074536.400.json
-
-###
-
-GET http://localhost:8080/rest/menus/"2012-04-23"
-Content-Type: application/json
-
-###
-
-GET http://localhost:8080/rest/menus/"2012-04-23"
-Content-Type: application/json
-
-###
-
-GET http://localhost:8080/rest/menus/date:"2012-04-23"
-Content-Type: application/json
-
-###
-
-GET http://localhost:8080/rest/menus/(date:"2012-04-23")
-Content-Type: application/json
-
-###
-
-GET http://localhost:8080/rest/menus/(2012-04-23)
-Content-Type: application/json
-
-<> 2020-09-08T074454.400.json
-
-###
-
-GET http://localhost:8080/rest/menus/2012-04-23
-Content-Type: application/json
-
-<> 2020-09-08T074439.400.json
-
-###
-
-GET http://localhost:8080/rest/menus/{2012-04-23}
-Content-Type: application/json
-
-###
-
-GET http://localhost:8080/rest/menus/2012-04-23
-Content-Type: application/json
-
-<> 2020-09-08T074214.400.json
-
-###
-
-POST http://localhost:8080/rest/menu
+POST http://localhost:8080/rest/dish
 Content-Type: application/json
 
 {
-  "date": "2012-04-23",
-  "restaurantId":"7"
+  "menuId": 6,
+  "mealId": 2,
+  "price": 400
 }
 
-<> 2020-09-08T074127.200.json
+<> 2020-09-09T110441-5.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 6,
+  "mealId": 1,
+  "price": 300
+}
+
+<> 2020-09-09T110441-4.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 2,
+  "price": 200
+}
+
+<> 2020-09-09T110441-3.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 1,
+  "price": 100
+}
+
+<> 2020-09-09T110441-2.200.json
 
 ###
 
@@ -105,11 +99,11 @@ POST http://localhost:8080/rest/menu
 Content-Type: application/json
 
 {
-  "date": "01012000",
-  "restaurantId":"7"
+"date": "2020-09-09",
+"restaurantId":"4"
 }
 
-<> 2020-09-08T074006.400.json
+<> 2020-09-09T110441-1.200.json
 
 ###
 
@@ -117,34 +111,11 @@ POST http://localhost:8080/rest/menu
 Content-Type: application/json
 
 {
-  "date": "01/01/2000",
-  "restaurantId":"7"
+"date": "2020-09-09",
+"restaurantId":"3"
 }
 
-<> 2020-09-08T073956.400.json
-
-###
-
-POST http://localhost:8080/rest/menu
-Content-Type: application/json
-
-{
-  "date": "01/01/2000",
-  "restaurantId":7
-}
-
-<> 2020-09-08T073940.400.json
-
-###
-
-GET http://localhost:8080/rest/restaurants
-Content-Type: application/json
-
-<> 2020-09-08T055646.200.json
-
-###
-
-DELETE http://localhost:8080/rest/restaurant/8
+<> 2020-09-09T110441.200.json
 
 ###
 
@@ -152,143 +123,10 @@ POST http://localhost:8080/rest/restaurant
 Content-Type: application/json
 
 {
-  "name": "Угли угли2"
+  "name": "ресторан"
 }
 
-<> 2020-09-08T055559.200.json
-
-###
-
-GET http://localhost:8080/rest/restaurant/5
-Content-Type: application/json
-
-<> 2020-09-08T055445.500.json
-
-###
-
-GET http://localhost:8080/rest/restaurant/6
-Content-Type: application/json
-
-<> 2020-09-08T055441.200.json
-
-###
-
-PUT http://localhost:8080/rest/restaurant/7
-Content-Type: application/json
-
-{
-  "name": "Угли угли"
-}
-
-<> 2020-09-08T055410.200.json
-
-###
-
-GET http://localhost:8080/rest/restaurants
-Content-Type: application/json
-
-<> 2020-09-08T055359.200.json
-
-###
-
-PUT http://localhost:8080/rest/restaurant/7
-Content-Type: application/json
-
-{
-  "name": "тест"
-}
-
-<> 2020-09-08T055355.200.json
-
-###
-
-PUT http://localhost:8080/rest/restaurant/7
-Content-Type: application/json
-
-{
-  "name": "тест"
-}
-
-<> 2020-09-08T054755.200.json
-
-###
-
-GET http://localhost:8080/rest/restaurants
-Content-Type: application/json
-
-<> 2020-09-08T054747.200.json
-
-###
-
-GET http://localhost:8080/rest/meals
-Content-Type: application/json
-
-<> 2020-09-08T054725.200.json
-
-###
-
-PUT http://localhost:8080/rest/restaurant/7
-Content-Type: application/json
-
-{
-  "name": "Угли"
-}
-
-<> 2020-09-08T054712.200.json
-
-###
-
-GET http://localhost:8080/rest/restaurants
-Content-Type: application/json
-
-<> 2020-09-08T054701.200.json
-
-###
-
-PUT http://localhost:8080/rest/restaurant/7
-Content-Type: application/json
-
-{
-  "name": "Угли"
-}
-
-<> 2020-09-08T054657.200.json
-
-###
-
-GET http://localhost:8080/rest/restaurants
-Content-Type: application/json
-
-<> 2020-09-08T054635.200.json
-
-###
-
-PUT http://localhost:8080/rest/restaurant/6
-Content-Type: application/json
-
-{
-  "name": "Угли"
-}
-
-<> 2020-09-08T054628.200.json
-
-###
-
-PUT http://localhost:8080/rest/restaurant/5
-Content-Type: application/json
-
-{
-  "name": "Угли"
-}
-
-<> 2020-09-08T054620.500.json
-
-###
-
-GET http://localhost:8080/rest/restaurants
-Content-Type: application/json
-
-<> 2020-09-08T054518.200.json
+<> 2020-09-09T110440-3.200.json
 
 ###
 
@@ -296,17 +134,146 @@ POST http://localhost:8080/rest/restaurant
 Content-Type: application/json
 
 {
-  "name": "Угли угли"
+  "name": "кафе"
 }
 
-<> 2020-09-08T054515.200.json
+<> 2020-09-09T110440-2.200.json
 
 ###
 
-GET http://localhost:8080/rest/restaurants
+POST http://localhost:8080/rest/meal
 Content-Type: application/json
 
-<> 2020-09-08T054403.200.json
+{
+  "name": "Борщ"
+}
+
+<> 2020-09-09T110440-1.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": "Окрошка"
+}
+
+<> 2020-09-09T110440.200.json
+
+###
+
+POST http://localhost:8080/rest/castvote/5:11
+Content-Type: application/json
+
+<> 2020-09-09T110156.403.json
+
+###
+
+POST http://localhost:8080/rest/castvote/5:11
+Content-Type: application/json
+
+<> 2020-09-09T110141.200.json
+
+###
+
+POST http://localhost:8080/rest/user
+Content-Type: application/json
+
+{
+  "name": "user",
+  "password": "password"
+}
+
+<> 2020-09-09T110127-7.200.json
+
+###
+
+POST http://localhost:8080/rest/user
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "admin"
+}
+
+<> 2020-09-09T110127-6.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 6,
+  "mealId": 2,
+  "price": 400
+}
+
+<> 2020-09-09T110127-5.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 6,
+  "mealId": 1,
+  "price": 300
+}
+
+<> 2020-09-09T110127-4.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 2,
+  "price": 200
+}
+
+<> 2020-09-09T110127-3.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 1,
+  "price": 100
+}
+
+<> 2020-09-09T110127-2.200.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+"date": "2020-09-09",
+"restaurantId":"4"
+}
+
+<> 2020-09-09T110127-1.200.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+"date": "2020-09-09",
+"restaurantId":"3"
+}
+
+<> 2020-09-09T110127.200.json
 
 ###
 
@@ -314,32 +281,21 @@ POST http://localhost:8080/rest/restaurant
 Content-Type: application/json
 
 {
-  "name": "Голый повар"
+  "name": "ресторан"
 }
 
-<> 2020-09-08T054356.200.json
+<> 2020-09-09T110126-3.200.json
 
 ###
 
-DELETE http://localhost:8080/rest/meal/5
-
-###
-
-PUT http://localhost:8080/rest/meal/5
+POST http://localhost:8080/rest/restaurant
 Content-Type: application/json
 
 {
-  "name": "окрошка на пиве"
+  "name": "кафе"
 }
 
-<> 2020-09-08T054332.500.json
-
-###
-
-GET http://localhost:8080/rest/meals
-Content-Type: application/json
-
-<> 2020-09-08T054300.200.json
+<> 2020-09-09T110126-2.200.json
 
 ###
 
@@ -347,45 +303,10 @@ POST http://localhost:8080/rest/meal
 Content-Type: application/json
 
 {
-  "name": "Голый повар"
+  "name": "Борщ"
 }
 
-<> 2020-09-08T054230.200.json
-
-###
-
-DELETE http://localhost:8080/rest/meal/3
-
-<> 2020-09-07T105959.500.json
-
-###
-
-GET http://localhost:8080/rest/meals
-Content-Type: application/json
-
-<> 2020-09-07T105949.200.json
-
-###
-
-DELETE http://localhost:8080/rest/meal/1
-
-###
-
-GET http://localhost:8080/rest/meals
-Content-Type: application/json
-
-<> 2020-09-07T105936.200.json
-
-###
-
-PUT http://localhost:8080/rest/meal/4
-Content-Type: application/json
-
-{
-  "name": "окрошка на пиве"
-}
-
-<> 2020-09-07T105933.200.json
+<> 2020-09-09T110126-1.200.json
 
 ###
 
@@ -393,10 +314,139 @@ POST http://localhost:8080/rest/meal
 Content-Type: application/json
 
 {
-  "name": "окрошка 2"
+  "name": "Окрошка"
 }
 
-<> 2020-09-07T105924.200.json
+<> 2020-09-09T110126.200.json
+
+###
+
+POST http://localhost:8080/rest/castvote/5:11
+Content-Type: application/json
+
+<> 2020-09-09T103441.500.json
+
+###
+
+POST http://localhost:8080/rest/user
+Content-Type: application/json
+
+{
+  "name": "user",
+  "password": "password"
+}
+
+<> 2020-09-09T103130-10.200.json
+
+###
+
+POST http://localhost:8080/rest/user
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "admin"
+}
+
+<> 2020-09-09T103130-9.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 6,
+  "mealId": 2,
+  "price": 400
+}
+
+<> 2020-09-09T103130-8.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 6,
+  "mealId": 1,
+  "price": 300
+}
+
+<> 2020-09-09T103130-7.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 2,
+  "price": 200
+}
+
+<> 2020-09-09T103130-6.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 1,
+  "price": 100
+}
+
+<> 2020-09-09T103130-5.200.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+"date": "2020-09-09",
+"restaurantId":"4"
+}
+
+<> 2020-09-09T103130-4.200.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+"date": "2020-09-09",
+"restaurantId":"3"
+}
+
+<> 2020-09-09T103130-3.200.json
+
+###
+
+POST http://localhost:8080/rest/restaurant
+Content-Type: application/json
+
+{
+  "name": "ресторан"
+}
+
+<> 2020-09-09T103130-2.200.json
+
+###
+
+POST http://localhost:8080/rest/restaurant
+Content-Type: application/json
+
+{
+  "name": "кафе"
+}
+
+<> 2020-09-09T103130-1.200.json
 
 ###
 
@@ -404,17 +454,116 @@ POST http://localhost:8080/rest/meal
 Content-Type: application/json
 
 {
-  "name": "окрошка"
+  "name": "Борщ"
 }
 
-<> 2020-09-07T105818.500.json
+<> 2020-09-09T103130.200.json
 
 ###
 
-GET http://localhost:8080/rest/meals
+POST http://localhost:8080/rest/meal
 Content-Type: application/json
 
-<> 2020-09-07T105810.200.json
+{
+  "name": "Окрошка"
+}
+
+<> 2020-09-09T103129.200.json
+
+###
+
+POST http://localhost:8080/rest/castvote/5:11
+Content-Type: application/json
+
+<> 2020-09-09T103102.500.json
+
+###
+
+POST http://localhost:8080/rest/user
+Content-Type: application/json
+
+{
+  "name": "user",
+  "password": "password"
+}
+
+<> 2020-09-09T103053-9.200.json
+
+###
+
+POST http://localhost:8080/rest/user
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "admin"
+}
+
+<> 2020-09-09T103053-8.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 6,
+  "mealId": 2,
+  "price": 400
+}
+
+<> 2020-09-09T103053-7.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 6,
+  "mealId": 1,
+  "price": 300
+}
+
+<> 2020-09-09T103053-6.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 2,
+  "price": 200
+}
+
+<> 2020-09-09T103053-5.200.json
+
+###
+
+POST http://localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 1,
+  "price": 100
+}
+
+<> 2020-09-09T103053-4.200.json
+
+###
+
+POST http://localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+"date": "2020-09-09",
+"restaurantId":"4"
+}
+
+<> 2020-09-09T103053-3.200.json
 
 ###
 

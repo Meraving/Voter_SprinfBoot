@@ -13,8 +13,6 @@ import java.math.BigDecimal;
 @Data
 public class CreateDishDto {
 
-    private Long id;
-
     @NotNull
     private Long menuId;
 
@@ -23,7 +21,5 @@ public class CreateDishDto {
 
     @NotNull
     private BigDecimal price;
-
-
 
 }

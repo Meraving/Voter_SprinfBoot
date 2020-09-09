@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "dish", uniqueConstraints = {@UniqueConstraint(columnNames = {"menu_id", "meal_id"}, name = "dish_unique_menu_meal_idx")})
-public class Dish extends AbstractNamedEntity{
+public class Dish extends AbstractBaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "menu_id", nullable = false)

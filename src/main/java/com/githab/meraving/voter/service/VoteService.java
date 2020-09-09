@@ -21,6 +21,6 @@ public interface VoteService {
 
     VoteDto getByUserAndMenu_Date (Long id, LocalDate date);
 
-    VoteDto castVote(Long Menuid);
+    VoteDto castVote(Long Menuid, Long userId);
 
 }

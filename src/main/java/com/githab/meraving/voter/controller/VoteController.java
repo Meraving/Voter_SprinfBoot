@@ -54,9 +54,9 @@ public class VoteController {
         return voteService.getByUserAndMenu_Date(id, date);
     }
 
-    @DeleteMapping("/castvote/{menuId}")
-    public VoteDto castVote(@PathVariable("menuId") Long id) {
-        return voteService.castVote(id);
+    @PostMapping("/castvote/{menuId}:{userId}")
+    public VoteDto castVote(@PathVariable("menuId") Long menuId, @PathVariable("userId") Long userId) {
+        return voteService.castVote(menuId, userId);
     }
 
 }
