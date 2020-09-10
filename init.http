@@ -1,0 +1,107 @@
+###
+POST localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": "Окрошка"
+}
+
+###
+POST localhost:8080/rest/meal
+Content-Type: application/json
+
+{
+  "name": "Борщ"
+}
+
+###
+POST localhost:8080/rest/restaurant
+Content-Type: application/json
+
+{
+  "name": "кафе"
+}
+
+###
+POST localhost:8080/rest/restaurant
+Content-Type: application/json
+
+{
+  "name": "ресторан"
+}
+
+###
+POST localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+"date": "2020-09-09",
+"restaurantId":"3"
+}
+
+###
+POST localhost:8080/rest/menu
+Content-Type: application/json
+
+{
+"date": "2020-09-09",
+"restaurantId":"4"
+}
+
+###
+POST localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 1,
+  "price": 100
+}
+
+###
+POST localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 5,
+  "mealId": 2,
+  "price": 200
+}
+
+###
+POST localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 6,
+  "mealId": 1,
+  "price": 300
+}
+
+###
+POST localhost:8080/rest/dish
+Content-Type: application/json
+
+{
+  "menuId": 6,
+  "mealId": 2,
+  "price": 400
+}
+
+###
+POST localhost:8080/rest/user
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "admin"
+}
+
+###
+POST localhost:8080/rest/user
+Content-Type: application/json
+
+{
+  "name": "user",
+  "password": "password"
+}
