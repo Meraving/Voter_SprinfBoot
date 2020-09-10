@@ -12,4 +12,4 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     show-sql: true
 value:
-  borderTime: 11:00:00
+  borderTime: "11:00:00"

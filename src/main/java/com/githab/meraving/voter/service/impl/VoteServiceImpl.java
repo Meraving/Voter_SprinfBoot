@@ -12,7 +12,7 @@ import com.githab.meraving.voter.repository.VoteRepository;
 import com.githab.meraving.voter.service.VoteService;
 import com.githab.meraving.voter.util.exception.TooLateException;
 import com.githab.meraving.voter.util.exception.WrongDateException;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -20,19 +20,18 @@ import org.springframework.util.Assert;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.githab.meraving.voter.util.ValidationUtil.getFromOptional;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Service
 public class VoteServiceImpl implements VoteService {
     private final VoteRepository repository;
     private final UserRepository userRepository;
     private final MenuRepository menuRepository;
-//    @Value("${value.borderTime}")
-    private final String borderTime = "11:00:00";
+    @Value("${value.borderTime}")
+    private String borderTime;
 
     @Override
     public VoteDto create(CreateVoteDto createVoteDto) {
@@ -51,9 +50,6 @@ public class VoteServiceImpl implements VoteService {
     @Override
     public VoteDto update(Long id, UpdateVoteDto updateVoteDto) {
         Assert.notNull(updateVoteDto, "vote must not be null");
-        if (LocalTime.now().isAfter(LocalTime.parse(borderTime))) {
-            throw new TooLateException();
-        }
         Vote vote = getFromOptional(repository.findById(id));
         User user = getFromOptional(userRepository.findById(updateVoteDto.getUserId()));
         Menu menu = getFromOptional(menuRepository.findById(updateVoteDto.getMenuId()));
