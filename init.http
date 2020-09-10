@@ -35,8 +35,8 @@ POST localhost:8080/rest/menu
 Content-Type: application/json
 
 {
-"date": "2020-09-09",
-"restaurantId":"3"
+  "date": "2020-09-10",
+  "restaurantId": "3"
 }
 
 ###
@@ -44,8 +44,8 @@ POST localhost:8080/rest/menu
 Content-Type: application/json
 
 {
-"date": "2020-09-09",
-"restaurantId":"4"
+  "date": "2020-09-10",
+  "restaurantId": "4"
 }
 
 ###
