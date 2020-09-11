@@ -13,3 +13,7 @@ spring:
     show-sql: true
 value:
   borderTime: "11:00:00"
+security:
+  timeToLive: 3600
+  secret: foigfdoigj
+  header: Authorization

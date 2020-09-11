@@ -7,13 +7,16 @@ import com.githab.meraving.voter.model.User;
 import com.githab.meraving.voter.repository.UserRepository;
 import com.githab.meraving.voter.service.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.githab.meraving.voter.util.ValidationUtil.*;
+import static com.githab.meraving.voter.util.UserUtil.convertRolesToAuthorities;
+import static com.githab.meraving.voter.util.ValidationUtil.getFromOptional;
 
 @AllArgsConstructor
 @Service
@@ -56,5 +59,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> getAll() {
         return repository.findAll().stream().map(UserDto::of).collect(Collectors.toList());
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+        User user = repository.getByName(username)
+                .orElseThrow(() -> new UsernameNotFoundException("Can`t find user " + username));
+        return new org.springframework.security.core.userdetails.User(user.getName(), user.getPassword(), convertRolesToAuthorities(user.getRoles()));
     }
 }
