@@ -1,334 +1,292 @@
-POST http://localhost:8080/rest/castvote/6:11
+POST http://localhost:8080/rest/meal
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI4NjEzLCJpYXQiOjE2MDAwMjUwMTN9.bqZvhKFebrE9D7U2zqYhbC6wwl5HCEZ6YBCj-6iucjRk-KlAtCxbCko6T_TeMXGd3Kpan-Cnlaf3mhxSutytSg
 
-<> 2020-09-09T110507.200.json
+{
+  "name": "Окрошк"
+}
+
+<> 2020-09-13T102352.200.json
 
 ###
 
-POST http://localhost:8080/rest/castvote/5:11
-Content-Type: application/json
-
-<> 2020-09-09T110451.200.json
-
-###
-
-POST http://localhost:8080/rest/castvote/5:11
-Content-Type: application/json
-
-<> 2020-09-09T110448.200.json
-
-###
-
-POST http://localhost:8080/rest/user
+POST http://localhost:8080/rest/auth/token
 Content-Type: application/json
 
 {
-  "name": "user",
+  "name": "User",
   "password": "password"
 }
 
-<> 2020-09-09T110441-7.200.json
+<> 2020-09-13T102335.200.json
 
 ###
 
-POST http://localhost:8080/rest/user
+POST http://localhost:8080/rest/auth/token
 Content-Type: application/json
 
 {
-  "name": "admin",
-  "password": "admin"
+  "name": "User",
+  "password": "password"
 }
 
-<> 2020-09-09T110441-6.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 6,
-  "mealId": 2,
-  "price": 400
-}
-
-<> 2020-09-09T110441-5.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 6,
-  "mealId": 1,
-  "price": 300
-}
-
-<> 2020-09-09T110441-4.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 5,
-  "mealId": 2,
-  "price": 200
-}
-
-<> 2020-09-09T110441-3.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 5,
-  "mealId": 1,
-  "price": 100
-}
-
-<> 2020-09-09T110441-2.200.json
-
-###
-
-POST http://localhost:8080/rest/menu
-Content-Type: application/json
-
-{
-"date": "2020-09-09",
-"restaurantId":"4"
-}
-
-<> 2020-09-09T110441-1.200.json
-
-###
-
-POST http://localhost:8080/rest/menu
-Content-Type: application/json
-
-{
-"date": "2020-09-09",
-"restaurantId":"3"
-}
-
-<> 2020-09-09T110441.200.json
-
-###
-
-POST http://localhost:8080/rest/restaurant
-Content-Type: application/json
-
-{
-  "name": "ресторан"
-}
-
-<> 2020-09-09T110440-3.200.json
-
-###
-
-POST http://localhost:8080/rest/restaurant
-Content-Type: application/json
-
-{
-  "name": "кафе"
-}
-
-<> 2020-09-09T110440-2.200.json
+<> 2020-09-13T102229.403.json
 
 ###
 
 POST http://localhost:8080/rest/meal
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI3NTU3LCJpYXQiOjE2MDAwMjM5NTd9.2VKdyPV8a6-VMsOmolEKPnoAY6nQcEf7BYS-1C_0sIKhQyMoO_HpTQcLk6IadpxkH6kGdRQsRcxDPpPJGHnpVg
 
 {
-  "name": "Борщ"
+  "name": "Окрошк"
 }
 
-<> 2020-09-09T110440-1.200.json
+<> 2020-09-13T102219.403.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "User",
+  "password": "password"
+}
+
+<> 2020-09-13T102214.403.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "User",
+  "password": "password"
+}
+
+<> 2020-09-13T102151.403.json
 
 ###
 
 POST http://localhost:8080/rest/meal
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI3NTU3LCJpYXQiOjE2MDAwMjM5NTd9.2VKdyPV8a6-VMsOmolEKPnoAY6nQcEf7BYS-1C_0sIKhQyMoO_HpTQcLk6IadpxkH6kGdRQsRcxDPpPJGHnpVg
+
+{
+  "name": "Окрошк"
+}
+
+<> 2020-09-13T100623.200.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "User",
+  "password": "password"
+}
+
+<> 2020-09-13T100558.200.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "Admin",
+  "password": "password"
+}
+
+<> 2020-09-13T100550.200.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "Admin",
+  "password": "password"
+}
+
+<> 2020-09-13T100511.500.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "Admin",
+  "password": "password"
+}
+
+<> 2020-09-13T100458.500.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "Admin",
+  "password": "password"
+}
+
+<> 2020-09-13T100356.500.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "Admin",
+  "password": "password"
+}
+
+<> 2020-09-13T100347.500.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI3MTY1LCJpYXQiOjE2MDAwMjM1NjV9.F3KvJ5E2oGMVD8Q0x0cDg2QCn5DjeIKR1IMCRsZ5NO8-Zy6-jSP8a5YZnOGMjv5FTHkiT8R_H3Fkxmg2mqdUhg
+
+{
+  "name": "Окрошк"
+}
+
+<> 2020-09-13T100337.500.html
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI3MTY1LCJpYXQiOjE2MDAwMjM1NjV9.F3KvJ5E2oGMVD8Q0x0cDg2QCn5DjeIKR1IMCRsZ5NO8-Zy6-jSP8a5YZnOGMjv5FTHkiT8R_H3Fkxmg2mqdUhg
+
+{
+  "name": "Окрошка5"
+}
+
+<> 2020-09-13T095937.200.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "User",
+  "password": "password"
+}
+
+<> 2020-09-13T095925.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI2OTUwLCJpYXQiOjE2MDAwMjMzNTB9.qKdzTibYu5DZDnJiKbj7_Q0YiHM-PBd6XDjTtpsm31XCOm1euWvnXO6FOXLqqLSZuTmfaIPxcCtgHRo8_jXvaA
+
+{
+  "name": "Окрошка4"
+}
+
+<> 2020-09-13T095917.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI2OTUwLCJpYXQiOjE2MDAwMjMzNTB9.qKdzTibYu5DZDnJiKbj7_Q0YiHM-PBd6XDjTtpsm31XCOm1euWvnXO6FOXLqqLSZuTmfaIPxcCtgHRo8_jXvaA
+
+{
+  "name": "Окрошка3"
+}
+
+<> 2020-09-13T095832.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI2OTUwLCJpYXQiOjE2MDAwMjMzNTB9.qKdzTibYu5DZDnJiKbj7_Q0YiHM-PBd6XDjTtpsm31XCOm1euWvnXO6FOXLqqLSZuTmfaIPxcCtgHRo8_jXvaA
+
+{
+  "name": "Окрошка3"
+}
+
+<> 2020-09-13T095717.500.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI2OTUwLCJpYXQiOjE2MDAwMjMzNTB9.qKdzTibYu5DZDnJiKbj7_Q0YiHM-PBd6XDjTtpsm31XCOm1euWvnXO6FOXLqqLSZuTmfaIPxcCtgHRo8_jXvaA
+
+{
+  "name": "Окрошка3"
+}
+
+<> 2020-09-13T095630.500.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI2OTUwLCJpYXQiOjE2MDAwMjMzNTB9.qKdzTibYu5DZDnJiKbj7_Q0YiHM-PBd6XDjTtpsm31XCOm1euWvnXO6FOXLqqLSZuTmfaIPxcCtgHRo8_jXvaA
 
 {
   "name": "Окрошка"
 }
 
-<> 2020-09-09T110440.200.json
+<> 2020-09-13T095624.500.json
 
 ###
 
-POST http://localhost:8080/rest/castvote/5:11
-Content-Type: application/json
-
-<> 2020-09-09T110156.403.json
-
-###
-
-POST http://localhost:8080/rest/castvote/5:11
-Content-Type: application/json
-
-<> 2020-09-09T110141.200.json
-
-###
-
-POST http://localhost:8080/rest/user
+POST http://localhost:8080/rest/auth/token
 Content-Type: application/json
 
 {
-  "name": "user",
+  "name": "Admin",
   "password": "password"
 }
 
-<> 2020-09-09T110127-7.200.json
-
-###
-
-POST http://localhost:8080/rest/user
-Content-Type: application/json
-
-{
-  "name": "admin",
-  "password": "admin"
-}
-
-<> 2020-09-09T110127-6.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 6,
-  "mealId": 2,
-  "price": 400
-}
-
-<> 2020-09-09T110127-5.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 6,
-  "mealId": 1,
-  "price": 300
-}
-
-<> 2020-09-09T110127-4.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 5,
-  "mealId": 2,
-  "price": 200
-}
-
-<> 2020-09-09T110127-3.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 5,
-  "mealId": 1,
-  "price": 100
-}
-
-<> 2020-09-09T110127-2.200.json
-
-###
-
-POST http://localhost:8080/rest/menu
-Content-Type: application/json
-
-{
-"date": "2020-09-09",
-"restaurantId":"4"
-}
-
-<> 2020-09-09T110127-1.200.json
-
-###
-
-POST http://localhost:8080/rest/menu
-Content-Type: application/json
-
-{
-"date": "2020-09-09",
-"restaurantId":"3"
-}
-
-<> 2020-09-09T110127.200.json
-
-###
-
-POST http://localhost:8080/rest/restaurant
-Content-Type: application/json
-
-{
-  "name": "ресторан"
-}
-
-<> 2020-09-09T110126-3.200.json
-
-###
-
-POST http://localhost:8080/rest/restaurant
-Content-Type: application/json
-
-{
-  "name": "кафе"
-}
-
-<> 2020-09-09T110126-2.200.json
+<> 2020-09-13T095614.200.json
 
 ###
 
 POST http://localhost:8080/rest/meal
 Content-Type: application/json
-
-{
-  "name": "Борщ"
-}
-
-<> 2020-09-09T110126-1.200.json
-
-###
-
-POST http://localhost:8080/rest/meal
-Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVc2VyIiwiZXhwIjoxNjAwMDI2OTUwLCJpYXQiOjE2MDAwMjMzNTB9.qKdzTibYu5DZDnJiKbj7_Q0YiHM-PBd6XDjTtpsm31XCOm1euWvnXO6FOXLqqLSZuTmfaIPxcCtgHRo8_jXvaA
 
 {
   "name": "Окрошка"
 }
 
-<> 2020-09-09T110126.200.json
+<> 2020-09-13T095605.500.json
 
 ###
 
-POST http://localhost:8080/rest/castvote/5:11
+POST http://localhost:8080/rest/auth/token
 Content-Type: application/json
 
-<> 2020-09-09T103441.500.json
+{
+  "name": "User",
+  "password": "password"
+}
+
+<> 2020-09-13T095552.200.json
 
 ###
 
-POST http://localhost:8080/rest/user
+POST http://localhost:8080/rest/auth/token
 Content-Type: application/json
 
 {
@@ -336,234 +294,282 @@ Content-Type: application/json
   "password": "password"
 }
 
-<> 2020-09-09T103130-10.200.json
-
-###
-
-POST http://localhost:8080/rest/user
-Content-Type: application/json
-
-{
-  "name": "admin",
-  "password": "admin"
-}
-
-<> 2020-09-09T103130-9.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 6,
-  "mealId": 2,
-  "price": 400
-}
-
-<> 2020-09-09T103130-8.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 6,
-  "mealId": 1,
-  "price": 300
-}
-
-<> 2020-09-09T103130-7.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 5,
-  "mealId": 2,
-  "price": 200
-}
-
-<> 2020-09-09T103130-6.200.json
-
-###
-
-POST http://localhost:8080/rest/dish
-Content-Type: application/json
-
-{
-  "menuId": 5,
-  "mealId": 1,
-  "price": 100
-}
-
-<> 2020-09-09T103130-5.200.json
-
-###
-
-POST http://localhost:8080/rest/menu
-Content-Type: application/json
-
-{
-"date": "2020-09-09",
-"restaurantId":"4"
-}
-
-<> 2020-09-09T103130-4.200.json
-
-###
-
-POST http://localhost:8080/rest/menu
-Content-Type: application/json
-
-{
-"date": "2020-09-09",
-"restaurantId":"3"
-}
-
-<> 2020-09-09T103130-3.200.json
-
-###
-
-POST http://localhost:8080/rest/restaurant
-Content-Type: application/json
-
-{
-  "name": "ресторан"
-}
-
-<> 2020-09-09T103130-2.200.json
-
-###
-
-POST http://localhost:8080/rest/restaurant
-Content-Type: application/json
-
-{
-  "name": "кафе"
-}
-
-<> 2020-09-09T103130-1.200.json
+<> 2020-09-13T095530.403.json
 
 ###
 
 POST http://localhost:8080/rest/meal
 Content-Type: application/json
-
-{
-  "name": "Борщ"
-}
-
-<> 2020-09-09T103130.200.json
-
-###
-
-POST http://localhost:8080/rest/meal
-Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMzQ2OSwiaWF0IjoxNTk5OTk5ODY5fQ.xFITJztdD-sG-mhkFGNSIXj5kyq6dHLQNgjMFO4yzMHOZk9MfMflwUPMYY0YCL5VVZky4iD08gYKhOkooBsk-A
 
 {
   "name": "Окрошка"
 }
 
-<> 2020-09-09T103129.200.json
+<> 2020-09-13T032445.200.json
 
 ###
 
-POST http://localhost:8080/rest/castvote/5:11
-Content-Type: application/json
-
-<> 2020-09-09T103102.500.json
-
-###
-
-POST http://localhost:8080/rest/user
-Content-Type: application/json
-
-{
-  "name": "user",
-  "password": "password"
-}
-
-<> 2020-09-09T103053-9.200.json
-
-###
-
-POST http://localhost:8080/rest/user
+POST http://localhost:8080/rest/auth/token
 Content-Type: application/json
 
 {
   "name": "admin",
-  "password": "admin"
+  "password": "password"
 }
 
-<> 2020-09-09T103053-8.200.json
+<> 2020-09-13T032431.200.json
 
 ###
 
-POST http://localhost:8080/rest/dish
+POST http://localhost:8080/rest/meal
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMzI2NSwiaWF0IjoxNTk5OTk5NjY1fQ.mA8EMHCuTgQZ4l3jgN4VgvtWq2RyQu1VGfdkPAAog0lLph5KGqLInyf-sQvZuggna4nAuF8OwDx8Io_KCT8ZpA
 
 {
-  "menuId": 6,
-  "mealId": 2,
-  "price": 400
+  "name": "Окрошка"
 }
 
-<> 2020-09-09T103053-7.200.json
+<> 2020-09-13T032129.500.json
 
 ###
 
-POST http://localhost:8080/rest/dish
+POST http://localhost:8080/rest/meal
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMzI2NSwiaWF0IjoxNTk5OTk5NjY1fQ.mA8EMHCuTgQZ4l3jgN4VgvtWq2RyQu1VGfdkPAAog0lLph5KGqLInyf-sQvZuggna4nAuF8OwDx8Io_KCT8ZpA
 
 {
-  "menuId": 6,
-  "mealId": 1,
-  "price": 300
+  "name": "Окрошка"
 }
 
-<> 2020-09-09T103053-6.200.json
+<> 2020-09-13T032125.200.json
 
 ###
 
-POST http://localhost:8080/rest/dish
+POST http://localhost:8080/rest/auth/token
 Content-Type: application/json
 
 {
-  "menuId": 5,
-  "mealId": 2,
-  "price": 200
+  "name": "admin",
+  "password": "password"
 }
 
-<> 2020-09-09T103053-5.200.json
+<> 2020-09-13T032107.200.json
 
 ###
 
-POST http://localhost:8080/rest/dish
+POST http://localhost:8080/rest/meal
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMzA2NSwiaWF0IjoxNTk5OTk5NDY1fQ.bZe6-U39fqQhD9wHMKO_Xk7nKaZV0RZJfvkzrwLnmgYunfdsuf-dDOsqxkcpbd3SscptYUp2ppBp2fKpE42SnA
 
 {
-  "menuId": 5,
-  "mealId": 1,
-  "price": 100
+  "name": "Окрошка"
 }
 
-<> 2020-09-09T103053-4.200.json
+<> 2020-09-13T031803.500.json
 
 ###
 
-POST http://localhost:8080/rest/menu
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMzA2NSwiaWF0IjoxNTk5OTk5NDY1fQ.bZe6-U39fqQhD9wHMKO_Xk7nKaZV0RZJfvkzrwLnmgYunfdsuf-dDOsqxkcpbd3SscptYUp2ppBp2fKpE42SnA
+
+{
+  "name": "Окрошка"
+}
+
+<> 2020-09-13T031759.200.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
 Content-Type: application/json
 
 {
-"date": "2020-09-09",
-"restaurantId":"4"
+  "name": "admin",
+  "password": "password"
 }
 
-<> 2020-09-09T103053-3.200.json
+<> 2020-09-13T031747.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMjkwMywiaWF0IjoxNTk5OTk5MzAzfQ.1S3CC9p3zJeOoQyoKmUY2LtVNihe9kJOC1fpbx-dP-T3kIMvfkFex7siUaHGBEpOPdAZuIoX4hTsKcDOuDyB2w
+
+{
+  "name": "Окрошка"
+}
+
+<> 2020-09-13T031629.200.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "password"
+}
+
+<> 2020-09-13T031612.200.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMjQ5NSwiaWF0IjoxNTk5OTk4ODk1fQ.1oBl-hEj2iosdbGhH-D13s39o8L5SFAhnuE8DokHmf4pBctUJ-eAQ2TxCoRWd9C2eEJC_a4clw9PfMG2eGYLCA
+{:
+  "name": "Окрошка"
+}:
+
+<> 2020-09-13T031302.400.html
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMjQ5NSwiaWF0IjoxNTk5OTk4ODk1fQ.1oBl-hEj2iosdbGhH-D13s39o8L5SFAhnuE8DokHmf4pBctUJ-eAQ2TxCoRWd9C2eEJC_a4clw9PfMG2eGYLCA
+{:
+  "name": "Окрошка"
+}:
+
+<> 2020-09-13T031004.400.html
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMjQ5NSwiaWF0IjoxNTk5OTk4ODk1fQ.1oBl-hEj2iosdbGhH-D13s39o8L5SFAhnuE8DokHmf4pBctUJ-eAQ2TxCoRWd9C2eEJC_a4clw9PfMG2eGYLCA
+{:
+  "name": "Окрошка"
+}:
+
+<> 2020-09-13T030950.400.html
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMjQ5NSwiaWF0IjoxNTk5OTk4ODk1fQ.1oBl-hEj2iosdbGhH-D13s39o8L5SFAhnuE8DokHmf4pBctUJ-eAQ2TxCoRWd9C2eEJC_a4clw9PfMG2eGYLCA
+{:
+  "name": "Окрошка"
+}:
+
+<> 2020-09-13T030941.400.html
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMjQ5NSwiaWF0IjoxNTk5OTk4ODk1fQ.1oBl-hEj2iosdbGhH-D13s39o8L5SFAhnuE8DokHmf4pBctUJ-eAQ2TxCoRWd9C2eEJC_a4clw9PfMG2eGYLCA
+{:
+  "name": "Окрошка"
+}:
+
+<> 2020-09-13T030837.400.html
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "password"
+}
+
+<> 2020-09-13T030817.200.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "password"
+}
+
+<> 2020-09-13T030714.403.json
+
+###
+
+GET http://localhost:8080/rest/meal/1
+Content-Type: application/json
+
+<> 2020-09-13T025333.403.json
+
+###
+
+POST http://localhost:8080/rest/meal
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDAwMDQ1MCwiaWF0IjoxNTk5OTk2ODUwfQ.QcxbEYOiC93DLlJZkWQ1jZqG97PFZbVrqDIjvrTf9HeJUSiHy0hzNJXnOYxM7317OZ5MFNtE__tIWAFqPhBdfg
+
+{
+  "name": "Окрошка2"
+}
+
+<> 2020-09-13T025324.200.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "password"
+}
+
+<> 2020-09-13T025244.403.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "password"
+}
+
+<> 2020-09-13T025232.403.json
+
+###
+
+POST http://localhost:8080/rest/auth/token
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "password"
+}
+
+<> 2020-09-13T025203.403.json
+
+###
+
+GET http://localhost:8080/rest/meal/1
+Content-Type: application/json
+
+<> 2020-09-13T023850.403.json
+
+###
+
+GET http://localhost:8080/rest/meal/1
+Content-Type: application/json
+
+<> 2020-09-13T023815.403.json
+
+###
+
+GET http://localhost:8080/rest/meal/1
+Content-Type: application/json
+
+<> 2020-09-13T023808.403.json
 
 ###
 

@@ -23,6 +23,6 @@ public class MenuDto {
     private RestaurantDto restaurantDto;
 
     public static MenuDto of(Menu menu) {
-        return new MenuDto(menu.getId(), menu.getDate(),RestaurantDto.of(menu.getRestaurant()));
+        return new MenuDto(menu.getId(), menu.getMenudate(), RestaurantDto.of(menu.getRestaurant()));
     }
 }

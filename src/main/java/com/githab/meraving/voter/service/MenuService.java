@@ -16,5 +16,5 @@ public interface MenuService {
 
     void delete(Long id);
 
-    List<MenuDto> getAllByDate(LocalDate date);
+    List<MenuDto> getAllByMenudate(LocalDate date);
 }

@@ -42,7 +42,7 @@ public class MenuServiceImpl implements MenuService {
     public MenuDto update(Long id, UpdateMenuDto updateMenuDto) {
         Menu menu = getFromOptional(repository.findById(id));
         Restaurant restaurant = getFromOptional(restaurantRepository.findById(updateMenuDto.getRestaurantId()));
-        menu.setDate(updateMenuDto.getDate());
+        menu.setMenudate(updateMenuDto.getDate());
         menu.setRestaurant(restaurant);
         return MenuDto.of(repository.save(menu));
     }
@@ -52,8 +52,8 @@ public class MenuServiceImpl implements MenuService {
     }
 
     @Override
-    public List<MenuDto> getAllByDate(LocalDate date) {
+    public List<MenuDto> getAllByMenudate(LocalDate date) {
 
-        return repository.getAllByDate(date).stream().map(MenuDto::of).collect(Collectors.toList());
+        return repository.getAllByMenudate(date).stream().map(MenuDto::of).collect(Collectors.toList());
     }
 }

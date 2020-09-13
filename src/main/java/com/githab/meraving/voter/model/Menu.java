@@ -15,12 +15,12 @@ import java.time.LocalDate;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "menu", uniqueConstraints = {@UniqueConstraint(columnNames = {"restaurant_id","date"}, name = "menu_restaurant_date_idx")})
+@Table(name = "menu", uniqueConstraints = {@UniqueConstraint(columnNames = {"restaurant_id", "menudate"}, name = "menu_restaurant_menudate_idx")})
 public class Menu extends AbstractBaseEntity{
 
-    @Column(name = "date", nullable = false)
+    @Column(name = "menudate", nullable = false)
     @NotNull
-    private LocalDate date;
+    private LocalDate menudate;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurant_id", nullable = false)
@@ -30,7 +30,7 @@ public class Menu extends AbstractBaseEntity{
 
     public static Menu of (CreateMenuDto createMenuDto, Restaurant restaurant){
         Menu menu = new Menu();
-        menu.setDate(createMenuDto.getDate());
+        menu.setMenudate(createMenuDto.getDate());
         menu.setRestaurant(restaurant);
         return menu;
     }

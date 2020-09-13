@@ -42,6 +42,6 @@ public class MenuController {
 
     @GetMapping("/menus/{date}")
     public List<MenuDto> getAllByDate(@PathVariable("date")  @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date ) {
-        return menuService.getAllByDate(date);
+        return menuService.getAllByMenudate(date);
     }
 }

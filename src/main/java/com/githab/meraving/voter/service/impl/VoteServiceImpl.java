@@ -73,15 +73,15 @@ public class VoteServiceImpl implements VoteService {
     @Override
     public VoteDto getByUserAndMenu_Date(Long id, LocalDate date) {
         User user = getFromOptional(userRepository.findById(id));
-        return VoteDto.of(getFromOptional(repository.getByUserAndMenu_Date(user, date)));
+        return VoteDto.of(getFromOptional(repository.getByUserAndMenu_Menudate(user, date)));
     }
 
     @Override
     public VoteDto castVote(Long menuId,Long userId) {
         User user = getFromOptional(userRepository.findById(userId));//юзера, нам, по идее, отдаст Security?
-        Vote vote = repository.getByUserAndMenu_Date(user, LocalDate.now()).orElse(null);
+        Vote vote = repository.getByUserAndMenu_Menudate(user, LocalDate.now()).orElse(null);
         Menu menu = getFromOptional(menuRepository.findById(menuId));
-        if (!menu.getDate().equals(LocalDate.now())){
+        if (!menu.getMenudate().equals(LocalDate.now())) {
             throw new WrongDateException();
         }
         if (vote == null) {

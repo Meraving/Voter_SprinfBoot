@@ -5,6 +5,7 @@ import com.githab.meraving.voter.dto.MealDto;
 import com.githab.meraving.voter.dto.UpdateMealDto;
 import com.githab.meraving.voter.service.MealService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -22,11 +23,13 @@ public class MealController {
     }
 
     @PostMapping("/meal")
+    @PreAuthorize("HasAthority('meal:write')")
     public MealDto createMeal(@RequestBody @Valid CreateMealDto createMealDto) {
         return mealService.create(createMealDto);
     }
 
     @GetMapping("/meal/{id}")
+    @PreAuthorize("HasAthority('meal:read')")
     public MealDto get(@PathVariable("id") Long id) {
         return mealService.get(id);
     }

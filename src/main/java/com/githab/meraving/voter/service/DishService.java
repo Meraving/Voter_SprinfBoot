@@ -4,6 +4,7 @@ import com.githab.meraving.voter.dto.CreateDishDto;
 import com.githab.meraving.voter.dto.DishDto;
 import com.githab.meraving.voter.dto.UpdateDishDto;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface DishService {
@@ -16,4 +17,6 @@ public interface DishService {
     void delete(Long id);
 
     List<DishDto> getAllByMenu(Long id);
+
+    List<DishDto> getAllByMenu_Menudate(LocalDate date);
 }

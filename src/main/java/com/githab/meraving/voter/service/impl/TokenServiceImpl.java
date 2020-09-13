@@ -68,7 +68,7 @@ public class TokenServiceImpl implements TokenService {
     public boolean validateToken(String token) {
         try {
             Jws<Claims> claimsJws = Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
-            return claimsJws.getBody().getExpiration().before(new Date());
+            return claimsJws.getBody().getExpiration().after(new Date());
         } catch (JwtException | IllegalArgumentException e) {
             throw new JwtAuthException("Jwt token is expired or invalid", HttpStatus.UNAUTHORIZED);
         }
