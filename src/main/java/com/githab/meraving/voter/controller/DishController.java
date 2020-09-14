@@ -25,7 +25,7 @@ public class DishController {
 
     @PostMapping("/dish")
     @PreAuthorize("hasAnyAuthority('DISH:WRITE')")
-    public DishDto createMeal(@RequestBody @Valid CreateDishDto createDishDto) {
+    public DishDto createDish(@RequestBody @Valid CreateDishDto createDishDto) {
         return dishService.create(createDishDto);
     }
 
@@ -37,19 +37,19 @@ public class DishController {
 
     @PutMapping("/dish/{id}")
     @PreAuthorize("hasAnyAuthority('DISH:WRITE')")
-    public DishDto updateMeal(@PathVariable("id") Long id, @RequestBody @Valid UpdateDishDto updateDishDto) {
+    public DishDto updateDish(@PathVariable("id") Long id, @RequestBody @Valid UpdateDishDto updateDishDto) {
         return dishService.update(id, updateDishDto);
     }
 
     @DeleteMapping("/dish/{id}")
     @PreAuthorize("hasAnyAuthority('DISH:WRITE')")
-    public void deleteMeal(@PathVariable("id") Long id) {
+    public void deleteDish(@PathVariable("id") Long id) {
         dishService.delete(id);
     }
 
     @GetMapping("/dishes/{menuId}")
     @PreAuthorize("hasAnyAuthority('DISH:READ')")
-    public List<DishDto> getAll(@PathVariable("menuId") Long id) {
+    public List<DishDto> getAllByMenuId(@PathVariable("menuId") Long id) {
         return dishService.getAllByMenu(id);
     }
 

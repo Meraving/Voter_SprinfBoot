@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @GetMapping("/user/{id}")
-    @PreAuthorize("hasAnyAuthority('USER:READ')")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
     public UserDto get(@PathVariable("id") Long id) {
         return userService.get(id);
     }
@@ -47,13 +47,13 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    @PreAuthorize("hasAnyAuthority('USER:READ')")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
     public List<UserDto> getAll() {
         return userService.getAll();
     }
 
     @GetMapping("/user/{name}")
-    @PreAuthorize("hasAnyAuthority('USER:READ')")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
     public UserDto getByName(@PathVariable("name") String name) {
         return userService.getByName(name);
     }

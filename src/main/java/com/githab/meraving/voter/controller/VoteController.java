@@ -62,7 +62,7 @@ public class VoteController {
         return voteService.getByUserAndMenu_Date(id, date);
     }
 
-    @PostMapping("/castvote/{menuId}")
+    @PostMapping("/castvote/menu/{menuId}")
     @PreAuthorize("hasAnyAuthority('VOTE:WRITE')")
     public VoteDto castVote(@PathVariable("menuId") Long menuId, Principal principal) {
         return voteService.castVote(menuId, principal);
