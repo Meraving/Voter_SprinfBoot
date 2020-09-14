@@ -18,6 +18,7 @@ public class UserUtil {
             roles.forEach(role -> {
                 if (role != null) {
                     result.add(new SimpleGrantedAuthority("ROLE_" + role.toString().toUpperCase()));
+                    result.addAll(role.getAuthorities());
                 }
             });
         }

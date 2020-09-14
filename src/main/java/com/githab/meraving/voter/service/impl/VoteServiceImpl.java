@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import java.security.Principal;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -77,8 +78,8 @@ public class VoteServiceImpl implements VoteService {
     }
 
     @Override
-    public VoteDto castVote(Long menuId,Long userId) {
-        User user = getFromOptional(userRepository.findById(userId));//юзера, нам, по идее, отдаст Security?
+    public VoteDto castVote(Long menuId, Principal principal) {
+        User user = getFromOptional(userRepository.getByName(principal.getName()));//юзера, нам, по идее, отдаст Security?
         Vote vote = repository.getByUserAndMenu_Menudate(user, LocalDate.now()).orElse(null);
         Menu menu = getFromOptional(menuRepository.findById(menuId));
         if (!menu.getMenudate().equals(LocalDate.now())) {

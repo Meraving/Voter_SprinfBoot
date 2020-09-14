@@ -1,18 +1,18 @@
 package com.githab.meraving.voter.model;
 
 public enum Permission {
-    DISH_READ("dish:read"),
-    DISH_WRITE("dish:write"),
-    MEAL_READ("meal:read"),
-    MEAL_WRITE("meal:write"),
-    MENU_READ("menu:read"),
-    MENU_WRITE("menu:write"),
-    RESTAURANT_READ("restaurant:read"),
-    RESTAURANT_WRITE("restaurant:write"),
-    VOTE_READ("vote:read"),
-    VOTE_WRITE("vote:write"),
-    USER_READ("user:read"),
-    USER_WRITE("user:write");
+    DISH_READ("DISH:READ"),
+    DISH_WRITE("DISH:WRITE"),
+    MEAL_READ("MEAL:READ"),
+    MEAL_WRITE("MEAL:WRITE"),
+    MENU_READ("MENU:READ"),
+    MENU_WRITE("MENU:WRITE"),
+    RESTAURANT_READ("RESTAURANT:READ"),
+    RESTAURANT_WRITE("RESTAURANT:WRITE"),
+    VOTE_READ("VOTE:READ"),
+    VOTE_WRITE("VOTE:WRITE"),
+    USER_READ("USER:READ"),
+    USER_WRITE("USER:WRITE");
     private final String permission;
 
     Permission(String permission) {

@@ -4,6 +4,7 @@ import com.githab.meraving.voter.dto.CreateVoteDto;
 import com.githab.meraving.voter.dto.UpdateVoteDto;
 import com.githab.meraving.voter.dto.VoteDto;
 
+import java.security.Principal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -21,6 +22,6 @@ public interface VoteService {
 
     VoteDto getByUserAndMenu_Date (Long id, LocalDate date);
 
-    VoteDto castVote(Long Menuid, Long userId);
+    VoteDto castVote(Long Menuid, Principal principal);
 
 }

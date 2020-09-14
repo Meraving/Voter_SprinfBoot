@@ -76,7 +76,7 @@ public class TokenServiceImpl implements TokenService {
 
     public Authentication getAuthentication(String token) {
         UserDetails userDetails = this.userService.loadUserByUsername(getUserName(token));
-        return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
+        return new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
     }
 
     public String getUserName(String token) {

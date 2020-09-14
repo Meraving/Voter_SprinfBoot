@@ -23,28 +23,31 @@ public class MealController {
     }
 
     @PostMapping("/meal")
-    @PreAuthorize("HasAthority('meal:write')")
+    @PreAuthorize("hasAnyAuthority('MEAL:WRITE')")
     public MealDto createMeal(@RequestBody @Valid CreateMealDto createMealDto) {
         return mealService.create(createMealDto);
     }
 
     @GetMapping("/meal/{id}")
-    @PreAuthorize("HasAthority('meal:read')")
+    @PreAuthorize("hasAnyAuthority('MEAL:READ')")
     public MealDto get(@PathVariable("id") Long id) {
         return mealService.get(id);
     }
 
     @PutMapping("/meal/{id}")
+    @PreAuthorize("hasAnyAuthority('MEAL:WRITE')")
     public MealDto updateMeal(@PathVariable("id") Long id, @RequestBody @Valid UpdateMealDto updateMealDto) {
         return mealService.update(id, updateMealDto);
     }
 
     @DeleteMapping("/meal/{id}")
+    @PreAuthorize("hasAnyAuthority('MEAL:WRITE')")
     public void deleteMeal(@PathVariable("id") Long id) {
         mealService.delete(id);
     }
 
     @GetMapping("/meals")
+    @PreAuthorize("hasAnyAuthority('MEAL:READ')")
     public List<MealDto> getAll() {
         return mealService.getAll();
     }
